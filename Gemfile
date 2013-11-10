@@ -38,6 +38,9 @@ gem 'pry-rails'
 
 gem 'nokogiri'
 
+gem 'therubyracer'
+gem 'less-rails-bootstrap'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
