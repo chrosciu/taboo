@@ -2,17 +2,10 @@
   <div class="row">
     <div class="col-md-4"></div>
     <div class="col-md-4" style="text-align: center;">
-      <div class="well" style="background: LightGreen;">
-        <div style="text-transform: uppercase;"><%= @card.word %></div>
+      <div id="card">
+        <%= render 'card' %>
       </div>
-      <div class="well">
-        <div><%= @card.taboo1 %></div>
-        <div><%= @card.taboo2 %></div>
-        <div><%= @card.taboo3 %></div>
-        <div><%= @card.taboo4 %></div>
-        <div><%= @card.taboo5 %></div>
-      </div>
-      <div><%= link_to 'Next Card', card_path, class: 'btn btn-primary btn-block active' %></div>
+      <div><%= link_to 'Next Card', card_path, remote: true, class: 'btn btn-primary btn-block active' %></div>
     </div>
     <div class="col-md-4"></div>
   </div>
