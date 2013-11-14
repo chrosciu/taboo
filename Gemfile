@@ -45,6 +45,8 @@ gem 'less-rails-bootstrap'
 gem 'rails_12factor', group: :production
 gem 'rufus-scheduler', group: :production
 
+gem 'ladda_on_rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

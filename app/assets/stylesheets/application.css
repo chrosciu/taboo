@@ -10,5 +10,6 @@
  *
  *= require_self
  *= require custom_bootstrap/custom_bootstrap
+ *= require ladda
  *= require_tree .
  */
