@@ -1,6 +1,5 @@
-require 'rufus/scheduler'
-
 if Rails.env.production?
+  require 'rufus/scheduler'
 
   scheduler = Rufus::Scheduler.start_new
 
