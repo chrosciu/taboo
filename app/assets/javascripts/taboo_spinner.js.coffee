@@ -9,11 +9,11 @@ class TabooSpinner
     $(document).on 'ajaxStop', @hideSpinner
 
   showSpinner: =>
-    $('a').addClass('disabled')
+    $('#next_card').addClass('disabled')
     @spinner.spin($('#taboos')[0])
 
   hideSpinner: =>
     @spinner.stop()
-    $('a').removeClass('disabled')
+    $('#next_card').removeClass('disabled')
 
 $ -> new TabooSpinner

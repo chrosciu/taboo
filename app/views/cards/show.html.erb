@@ -2,10 +2,13 @@
   <div class="row">
     <div class="col-md-4"></div>
     <div class="col-md-4" style="text-align: center;">
+      <div id="counter">
+        &nbsp;
+      </div>
       <div id="card">
         <%= render 'card' %>
       </div>
-      <div><%= link_to 'Next Card', card_path, remote: true, class: 'btn btn-primary btn-block active' %></div>
+      <div><%= link_to 'Next Card', card_path, remote: true, class: 'btn btn-primary btn-block active', id: 'next_card' %></div>
     </div>
     <div class="col-md-4"></div>
   </div>
