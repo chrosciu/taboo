@@ -1,17 +1,33 @@
 class Counter
 
   constructor: ->
-    @attachCounter()
+    @attachCounter() if @counterDivPresent()
+
+  counterDivPresent: ->
+    $('#counter').length > 0
 
   attachCounter: ->
-    @startCounter() if $('#counter').length > 0
+    @startCounter()
+    @observeAjax()
+
+  observeAjax: ->
+    $(document).on 'ajaxStart', @pauseCounter
+    $(document).on 'ajaxStop', @resumeCounter
 
   startCounter: ->
     @duration = 60
+    @paused = false
     @displayMessage()
     @counter = setInterval @counterCallback, 1000
 
+  pauseCounter: =>
+    @paused = true
+
+  resumeCounter: =>
+    @paused = false
+
   counterCallback: =>
+    return if @paused
     @duration -= 1
     if @duration > 0
       @displayMessage()
