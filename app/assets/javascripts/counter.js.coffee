@@ -6,6 +6,9 @@ class Counter
   counterDivPresent: ->
     $('#counter').length > 0
 
+  timeout: ->
+    parseInt($("#counter").attr("data-timeout")) ? 60
+
   attachCounter: ->
     @startCounter()
     @observeAjax()
@@ -15,7 +18,7 @@ class Counter
     $(document).on 'ajaxStop', @resumeCounter
 
   startCounter: ->
-    @duration = 60
+    @duration = @timeout()
     @paused = false
     @displayMessage()
     @counter = setInterval @counterCallback, 1000

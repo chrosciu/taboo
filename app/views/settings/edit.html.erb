@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4" style="text-align: center;">
+      <%= simple_form_for @setting do |f| %>
+        <%= f.input :timeout, prompt: 'Please select', collection: [30, 60, 90, 120] %>
+        <%= f.button :submit, class: 'btn-primary btn-block' %>
+      <% end %>
+      <div><%= link_to 'Cancel', root_path, class: 'btn btn-success btn-block active' %></div>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+</div>
+
+

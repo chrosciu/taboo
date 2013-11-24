@@ -3,7 +3,7 @@
     <div class="col-md-4"></div>
     <div class="col-md-4" style="text-align: center;">
       <div><%= link_to 'Cancel', root_path, class: 'btn btn-danger btn-block active' %></div>
-      <div id="counter">&nbsp;</div>
+      <div id="counter" data-timeout="<%= Setting.instance.timeout %>">&nbsp;</div>
       <div id="card">
         <%= render 'card' %>
       </div>

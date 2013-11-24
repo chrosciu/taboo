@@ -14,6 +14,7 @@ Taboo::Application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
   resource :card, only: [:show]
+  resource :setting, only: [:edit, :update]
 
   # Example resource route with options:
   #   resources :products do

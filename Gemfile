@@ -47,6 +47,8 @@ gem 'rufus-scheduler', group: :production
 
 gem 'ladda_on_rails'
 
+gem 'simple_form', '3.0.0'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
