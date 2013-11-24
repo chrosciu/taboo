@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131105100016) do
+ActiveRecord::Schema.define(version: 20131124124724) do
 
   create_table "cards", force: true do |t|
     t.string "word"
@@ -20,6 +20,10 @@ ActiveRecord::Schema.define(version: 20131105100016) do
     t.string "taboo3"
     t.string "taboo4"
     t.string "taboo5"
+  end
+
+  create_table "settings", force: true do |t|
+    t.integer "timeout", default: 60, null: false
   end
 
 end
